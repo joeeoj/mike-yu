@@ -1,0 +1,74 @@
+baseURL = "https://mike-yu.com/"
+title = "Mike Yu"
+
+theme = "hugo-coder"
+
+languageCode = "en-us"
+defaultContentLanguage = "en"
+
+paginate = 20
+
+pygmentsStyle = "b2"
+pygmentsCodeFences = true
+pygmentsCodeFencesGuessSyntax = true
+
+[params]
+  author = "Mike Yu"
+  info = ""
+  description = "Mike Yu's website"
+  keywords = "website,portfolio,resume,blog,yu"
+  gravatar = "avatar@blueskyemail.net"
+
+  favicon_32 = "/img/favicon-32x32.png"
+  favicon_16 = "/img/favicon-16x16.png"
+
+  # footercontent = "Enter a text here."
+  hideFooter = false
+  hideCredits = false
+  hideCopyright = false
+  since = 2021
+
+  enableTwemoji = true
+
+  colorScheme = "auto"
+  hideColorSchemeToggle = false
+
+  # customCSS = ["css/custom.css"]
+  # customSCSS = ["scss/custom.scss"]
+  # customJS = ["js/custom.js"]
+
+[taxonomies]
+  category = "categories"
+  series = "series"
+  tag = "tags"
+  author = "authors"
+
+# Social links
+[[params.social]]
+  name = "Github"
+  icon = "fa fa-github fa-2x"
+  weight = 1
+  url = "https://github.com/joeeoj/"
+[[params.social]]
+  name = "LinkedIn"
+  icon = "fa fa-linkedin fa-2x"
+  weight = 2
+  url = "https://www.linkedin.com/in/mryu1/"
+
+# Menu links
+[[menu.main]]
+  name = "About"
+  weight = 1
+  url = "about/"
+# [[menu.main]]
+#   name = "Projects"
+#   weight = 2
+#   url = "projects/"
+# [[menu.main]]
+#   name = "Blog"
+#   weight = 3
+#   url  = "posts/"
+# [[menu.main]]
+#   name = "Contact"
+#   weight = 4
+#   url = "contact/"

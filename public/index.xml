@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mike Yu</title>
+    <link>https://mike-yu.com/</link>
+    <description>Recent content on Mike Yu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://mike-yu.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About Mike</title>
+      <link>https://mike-yu.com/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mike-yu.com/about/</guid>
+      <description>Fun facts     Favorite book: Where the Wild Things Are Favorite beer: Bodhizafa IPA Once was chased by a moose in Alaska. Do not recommend.  Career    import json with open(&amp;#39;resume.json&amp;#39;) as f: resume = json.load(f) for (age, exp) in zip(range(21, 37, 3), resume): state, job = exp.get(&amp;#39;state&amp;#39;), exp.get(&amp;#39;job&amp;#39;) print(f&amp;#39;{age} -&amp;gt; {state} | {job}&amp;#39;) &amp;gt;&amp;gt;&amp;gt; 21 -&amp;gt; IL | Music Major &amp;gt;&amp;gt;&amp;gt; 24 -&amp;gt; GA | Project Manager &amp;gt;&amp;gt;&amp;gt; 27 -&amp;gt; WA | Business Analyst &amp;gt;&amp;gt;&amp;gt; 30 -&amp;gt; WA | Solution Architect &amp;gt;&amp;gt;&amp;gt; 33 -&amp;gt; WA | Senior Data Analyst &amp;gt;&amp;gt;&amp;gt; 36 -&amp;gt; ?</description>
+    </item>
+    
+  </channel>
+</rss>

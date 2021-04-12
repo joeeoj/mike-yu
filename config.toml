@@ -54,6 +54,11 @@ pygmentsCodeFencesGuessSyntax = true
   icon = "fa fa-linkedin fa-2x"
   weight = 2
   url = "https://www.linkedin.com/in/mryu1/"
+[[params.social]]
+  name = "Resume"
+  icon = "fa fa-history fa-2x"
+  weight = 3
+  url = "https://registry.jsonresume.org/joeeoj"
 
 # Menu links
 [[menu.main]]

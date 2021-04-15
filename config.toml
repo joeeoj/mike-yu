@@ -65,10 +65,10 @@ pygmentsCodeFencesGuessSyntax = true
   name = "About"
   weight = 1
   url = "about/"
-# [[menu.main]]
-#   name = "Projects"
-#   weight = 2
-#   url = "projects/"
+[[menu.main]]
+  name = "Projects"
+  weight = 2
+  url = "projects/"
 # [[menu.main]]
 #   name = "Blog"
 #   weight = 3

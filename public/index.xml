@@ -15,5 +15,18 @@
       <description>Fun facts     Favorite book: Where the Wild Things Are Favorite beer: Bodhizafa IPA Once was chased by a moose in Alaska. Do not recommend.  Career    import json with open(&amp;#39;resume.json&amp;#39;) as f: resume = json.load(f) for (age, exp) in zip(range(21, 37, 3), resume): state, job = exp.get(&amp;#39;state&amp;#39;), exp.get(&amp;#39;job&amp;#39;) print(f&amp;#39;{age} -&amp;gt; {state} | {job}&amp;#39;) &amp;gt;&amp;gt;&amp;gt; 21 -&amp;gt; IL | Music Major &amp;gt;&amp;gt;&amp;gt; 24 -&amp;gt; GA | Project Manager &amp;gt;&amp;gt;&amp;gt; 27 -&amp;gt; WA | Business Analyst &amp;gt;&amp;gt;&amp;gt; 30 -&amp;gt; WA | Solution Architect &amp;gt;&amp;gt;&amp;gt; 33 -&amp;gt; WA | Senior Data Analyst &amp;gt;&amp;gt;&amp;gt; 36 -&amp;gt; ?</description>
     </item>
     
+    <item>
+      <title>Projects</title>
+      <link>https://mike-yu.com/projects/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mike-yu.com/projects/</guid>
+      <description>Recipes    whatsfordinner.recipes
+Based on Recipes by jeffThompson and modifications by kvpsky. It is a static website, hosted by Netlify in my case, with my favorite recipes and some editorial notes. Helpful for last minute dinner planning.
+Python Workout    https://github.com/joeeoj/python-workout
+Daily (mostly) solutions to the 50-ish problems in Reuven Lerner&amp;rsquo;s Python Workout book.
+I have an intermediate knowledge of Python but this continues to teach me interesting techniques and has stretched me to get better at writing tests and fully embrace type hints.</description>
+    </item>
+    
   </channel>
 </rss>

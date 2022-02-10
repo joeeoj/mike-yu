@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>docopt on Mike Yu</title>
+    <link>https://mike-yu.com/tags/docopt/</link>
+    <description>Recent content in docopt on Mike Yu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 10 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://mike-yu.com/tags/docopt/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>trying out docopt</title>
+      <link>https://mike-yu.com/posts/trying-out-docopt/</link>
+      <pubDate>Thu, 10 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://mike-yu.com/posts/trying-out-docopt/</guid>
+      <description>trying out docopt    In my last post I created a very small command line interface (CLI) using argparse, which is a built in Python module. This time around I&amp;rsquo;m going to use the same code as before but instead of argparse I&amp;rsquo;ll use a third-party module calle docopt.
+I got this idea from a great talk called From Python script to Open Source Project by Michał Karzyński. It has a lot of great content about putting together a fully-fledged open source Python project and I recommend watching the whole thing.</description>
+    </item>
+    
+  </channel>
+</rss>

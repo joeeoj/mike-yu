@@ -2,18 +2,41 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://mike-yu.com/tags/cli/</loc>
+    <lastmod>2022-02-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mike-yu.com/tags/docopt/</loc>
+    <lastmod>2022-02-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mike-yu.com/</loc>
+    <lastmod>2022-02-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mike-yu.com/posts/</loc>
+    <lastmod>2022-02-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mike-yu.com/tags/python/</loc>
+    <lastmod>2022-02-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mike-yu.com/tags/</loc>
+    <lastmod>2022-02-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mike-yu.com/posts/trying-out-docopt/</loc>
+    <lastmod>2022-02-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mike-yu.com/tags/argparse/</loc>
+    <lastmod>2021-07-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://mike-yu.com/posts/argparse-is-cool/</loc>
+    <lastmod>2021-07-05T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://mike-yu.com/about/</loc>
   </url><url>
     <loc>https://mike-yu.com/authors/</loc>
   </url><url>
     <loc>https://mike-yu.com/categories/</loc>
   </url><url>
-    <loc>https://mike-yu.com/</loc>
-  </url><url>
     <loc>https://mike-yu.com/projects/</loc>
   </url><url>
     <loc>https://mike-yu.com/series/</loc>
-  </url><url>
-    <loc>https://mike-yu.com/tags/</loc>
   </url>
 </urlset>

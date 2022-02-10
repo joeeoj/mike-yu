@@ -10,15 +10,15 @@
     
 
     <meta name="author" content="Mike Yu">
-    <meta name="description" content="Fun facts     Favorite book: Where the Wild Things Are Favorite beer: Bodhizafa IPA Once was chased by a moose in Alaska. Do not recommend.  Career    import json with open(&#39;resume.json&#39;) as f: resume = json.load(f) for (age, exp) in zip(range(21, 37, 3), resume): state, job = exp.get(&#39;state&#39;), exp.get(&#39;job&#39;) print(f&#39;{age} -&gt; {state} | {job}&#39;) &gt;&gt;&gt; 21 -&gt; IL | Music Major &gt;&gt;&gt; 24 -&gt; GA | Project Manager &gt;&gt;&gt; 27 -&gt; WA | Business Analyst &gt;&gt;&gt; 30 -&gt; WA | Solution Architect &gt;&gt;&gt; 33 -&gt; WA | Senior Data Analyst &gt;&gt;&gt; 36 -&gt; ?">
+    <meta name="description" content="Fun facts     Currently Reading: My Year Abroad by Chang-rae Lee Favorite team: Mariners (see The History of the Seattle Mariners) Famously featured in the Embers Grille Big Triple Challenge commercial  Career    import json with open(&#39;resume.json&#39;) as f: resume = json.load(f) for exp in resume: print(f&#39;{exp[&#34;state&#34;]} -&gt; {exp[&#34;job&#34;]}&#39;) &gt;&gt;&gt; IL -&gt; Music Major &gt;&gt;&gt; GA -&gt; Project Manager &gt;&gt;&gt; WA -&gt; Business Analyst &gt;&gt;&gt; WA -&gt; Solution Architect &gt;&gt;&gt; WA -&gt; Data Analyst &gt;&gt;&gt; WA -&gt; Senior Data Analyst ">
     <meta name="keywords" content="website,portfolio,resume,blog,yu">
 
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="About Mike"/>
-<meta name="twitter:description" content="Fun facts     Favorite book: Where the Wild Things Are Favorite beer: Bodhizafa IPA Once was chased by a moose in Alaska. Do not recommend.  Career    import json with open(&#39;resume.json&#39;) as f: resume = json.load(f) for (age, exp) in zip(range(21, 37, 3), resume): state, job = exp.get(&#39;state&#39;), exp.get(&#39;job&#39;) print(f&#39;{age} -&gt; {state} | {job}&#39;) &gt;&gt;&gt; 21 -&gt; IL | Music Major &gt;&gt;&gt; 24 -&gt; GA | Project Manager &gt;&gt;&gt; 27 -&gt; WA | Business Analyst &gt;&gt;&gt; 30 -&gt; WA | Solution Architect &gt;&gt;&gt; 33 -&gt; WA | Senior Data Analyst &gt;&gt;&gt; 36 -&gt; ?"/>
+<meta name="twitter:description" content="Fun facts     Currently Reading: My Year Abroad by Chang-rae Lee Favorite team: Mariners (see The History of the Seattle Mariners) Famously featured in the Embers Grille Big Triple Challenge commercial  Career    import json with open(&#39;resume.json&#39;) as f: resume = json.load(f) for exp in resume: print(f&#39;{exp[&#34;state&#34;]} -&gt; {exp[&#34;job&#34;]}&#39;) &gt;&gt;&gt; IL -&gt; Music Major &gt;&gt;&gt; GA -&gt; Project Manager &gt;&gt;&gt; WA -&gt; Business Analyst &gt;&gt;&gt; WA -&gt; Solution Architect &gt;&gt;&gt; WA -&gt; Data Analyst &gt;&gt;&gt; WA -&gt; Senior Data Analyst "/>
 
     <meta property="og:title" content="About Mike" />
-<meta property="og:description" content="Fun facts     Favorite book: Where the Wild Things Are Favorite beer: Bodhizafa IPA Once was chased by a moose in Alaska. Do not recommend.  Career    import json with open(&#39;resume.json&#39;) as f: resume = json.load(f) for (age, exp) in zip(range(21, 37, 3), resume): state, job = exp.get(&#39;state&#39;), exp.get(&#39;job&#39;) print(f&#39;{age} -&gt; {state} | {job}&#39;) &gt;&gt;&gt; 21 -&gt; IL | Music Major &gt;&gt;&gt; 24 -&gt; GA | Project Manager &gt;&gt;&gt; 27 -&gt; WA | Business Analyst &gt;&gt;&gt; 30 -&gt; WA | Solution Architect &gt;&gt;&gt; 33 -&gt; WA | Senior Data Analyst &gt;&gt;&gt; 36 -&gt; ?" />
+<meta property="og:description" content="Fun facts     Currently Reading: My Year Abroad by Chang-rae Lee Favorite team: Mariners (see The History of the Seattle Mariners) Famously featured in the Embers Grille Big Triple Challenge commercial  Career    import json with open(&#39;resume.json&#39;) as f: resume = json.load(f) for exp in resume: print(f&#39;{exp[&#34;state&#34;]} -&gt; {exp[&#34;job&#34;]}&#39;) &gt;&gt;&gt; IL -&gt; Music Major &gt;&gt;&gt; GA -&gt; Project Manager &gt;&gt;&gt; WA -&gt; Business Analyst &gt;&gt;&gt; WA -&gt; Solution Architect &gt;&gt;&gt; WA -&gt; Data Analyst &gt;&gt;&gt; WA -&gt; Senior Data Analyst " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://mike-yu.com/about/" /><meta property="article:section" content="" />
 
@@ -109,6 +109,10 @@
               <a class="navigation-link" href="/projects/">Projects</a>
             </li>
           
+            <li class="navigation-item">
+              <a class="navigation-link" href="/posts/">Blog</a>
+            </li>
+          
         
         
       </ul>
@@ -136,9 +140,9 @@
   </a>
 </h2>
 <ul>
-<li>Favorite book: Where the Wild Things Are</li>
-<li>Favorite beer: Bodhizafa IPA</li>
-<li>Once was chased by a moose in Alaska. Do not recommend.</li>
+<li>Currently Reading: My Year Abroad by Chang-rae Lee</li>
+<li>Favorite team: Mariners (see <a href="https://www.youtube.com/watch?v=TIgK56cAjfY">The History of the Seattle Mariners</a>)</li>
+<li>Famously featured in the <a href="https://www.youtube.com/watch?v=3a4lG5SRLkE">Embers Grille Big Triple Challenge</a> commercial</li>
 </ul>
 <h2 id="career">
   Career
@@ -151,15 +155,14 @@
 <span style="color:#fff;font-weight:bold">with</span> <span style="color:#fff;font-weight:bold">open</span>(<span style="color:#0ff;font-weight:bold">&#39;resume.json&#39;</span>) <span style="color:#fff;font-weight:bold">as</span> f:
     resume = json.load(f)
 
-<span style="color:#fff;font-weight:bold">for</span> (age, exp) in <span style="color:#fff;font-weight:bold">zip</span>(<span style="color:#fff;font-weight:bold">range</span>(<span style="color:#ff0;font-weight:bold">21</span>, <span style="color:#ff0;font-weight:bold">37</span>, <span style="color:#ff0;font-weight:bold">3</span>), resume):
-    state, job = exp.get(<span style="color:#0ff;font-weight:bold">&#39;state&#39;</span>), exp.get(<span style="color:#0ff;font-weight:bold">&#39;job&#39;</span>)
-    <span style="color:#fff;font-weight:bold">print</span>(f<span style="color:#0ff;font-weight:bold">&#39;{age} -&gt; {state} | {job}&#39;</span>)
-</code></pre></div><div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">&gt;&gt;&gt; 21 -&gt; IL | Music Major
-&gt;&gt;&gt; 24 -&gt; GA | Project Manager
-&gt;&gt;&gt; 27 -&gt; WA | Business Analyst
-&gt;&gt;&gt; 30 -&gt; WA | Solution Architect
-&gt;&gt;&gt; 33 -&gt; WA | Senior Data Analyst
-&gt;&gt;&gt; 36 -&gt; ?? | Data Engineer ?
+<span style="color:#fff;font-weight:bold">for</span> exp in resume:
+    <span style="color:#fff;font-weight:bold">print</span>(f<span style="color:#0ff;font-weight:bold">&#39;{exp[&#34;state&#34;]} -&gt; {exp[&#34;job&#34;]}&#39;</span>)
+</code></pre></div><div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">&gt;&gt;&gt; IL -&gt; Music Major
+&gt;&gt;&gt; GA -&gt; Project Manager
+&gt;&gt;&gt; WA -&gt; Business Analyst
+&gt;&gt;&gt; WA -&gt; Solution Architect
+&gt;&gt;&gt; WA -&gt; Data Analyst
+&gt;&gt;&gt; WA -&gt; Senior Data Analyst
 </code></pre></div>
   </article>
 </section>
@@ -175,7 +178,9 @@
       
         ©
         
-        2021
+          2021 -
+        
+        2022
          Mike Yu 
       
       

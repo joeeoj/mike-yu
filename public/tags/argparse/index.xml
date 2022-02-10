@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>argparse on Mike Yu</title>
+    <link>https://mike-yu.com/tags/argparse/</link>
+    <description>Recent content in argparse on Mike Yu</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 05 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://mike-yu.com/tags/argparse/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>argparse is cool</title>
+      <link>https://mike-yu.com/posts/argparse-is-cool/</link>
+      <pubDate>Mon, 05 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://mike-yu.com/posts/argparse-is-cool/</guid>
+      <description>argparse is cool    I need to copy files between S3 buckets on a regular basis for my job. The aws command line tool is great but I forget flags often&amp;hellip;and usually the same ones over and over. What if I made a custom version of aws s3 cp that was simpler and fit the majority of my copy usecases?
+Well, here it is in 43 lines (with proper spacing) using argparse:</description>
+    </item>
+    
+  </channel>
+</rss>

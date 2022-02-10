@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="color-scheme" content="light dark">
+    
+    
+
+    <meta name="author" content="Mike Yu">
+    <meta name="description" content="argparse is good for making quick, custom CLI tools.">
+    <meta name="keywords" content="website,portfolio,resume,blog,yu">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="argparse is cool"/>
+<meta name="twitter:description" content="argparse is good for making quick, custom CLI tools."/>
+
+    <meta property="og:title" content="argparse is cool" />
+<meta property="og:description" content="argparse is good for making quick, custom CLI tools." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mike-yu.com/posts/argparse-is-cool/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-07-05T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2021-07-05T00:00:00&#43;00:00" />
+
+
+
+    <title>
+  argparse is cool · Mike Yu
+</title>
+
+    
+      <link rel="canonical" href="https://mike-yu.com/posts/argparse-is-cool/">
+    
+
+    
+    
+    <link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.1.7" as="font" type="font/woff2" integrity="sha256-hEIt6X6xzye8ubyk8/uxjz68cRZHsJxoKS9fQ8idUGQ=" crossorigin>
+
+    
+      
+      
+      <link rel="stylesheet" href="/css/coder.min.abe8b6775d85a01169c10329309df501aa8a008ab354002f7858f077cae76020.css" integrity="sha256-q&#43;i2d12FoBFpwQMpMJ31AaqKAIqzVAAveFjwd8rnYCA=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+      
+        
+        
+        <link rel="stylesheet" href="/css/coder-dark.min.89c82b6022b96f77aeb521b240daec4f87ea029d84d1c78b8acd0735b91b3c92.css" integrity="sha256-icgrYCK5b3eutSGyQNrsT4fqAp2E0ceLis0HNbkbPJI=" crossorigin="anonymous" media="screen" />
+      
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16">
+
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+    
+      <script defer src="https://twemoji.maxcdn.com/v/13.0.1/twemoji.min.js"
+        integrity="sha384-5f4X0lBluNY/Ib4VhGx0Pf6iDCF99VGXJIyYy7dDLY5QlEd7Ap0hICSSZA1XYbc4" crossorigin="anonymous"></script>
+    
+
+    <meta name="generator" content="Hugo 0.81.0" />
+  </head>
+
+  
+  
+    
+  
+  <body class="colorscheme-auto"
+        onload=" twemoji.parse(document.body); "
+  >
+    
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/">
+      Mike Yu
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/projects/">Projects</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/posts/">Blog</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="https://mike-yu.com/posts/argparse-is-cool/">
+              argparse is cool
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <time datetime='2021-07-05T00:00:00Z'>
+                July 5, 2021
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              3-minute read
+            </span>
+          </div>
+          
+          
+          <div class="tags">
+  <i class="fa fa-tag" aria-hidden="true"></i>
+    <a href="/tags/python/">python</a>
+      <span class="separator">•</span>
+    <a href="/tags/argparse/">argparse</a>
+      <span class="separator">•</span>
+    <a href="/tags/cli/">CLI</a></div>
+
+        </div>
+      </header>
+
+      <div>
+        
+        <h1 id="argparse-is-cool">
+  argparse is cool
+  <a class="heading-link" href="#argparse-is-cool">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h1>
+<p>I need to copy files between S3 buckets on a regular basis for my job. The aws command line tool is great but I forget flags often&hellip;and usually the same ones over and over. What if I made a custom version of <code>aws s3 cp</code> that was simpler and fit the majority of my copy usecases?</p>
+<p>Well, here it is in 43 lines (with proper spacing) using argparse:</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#007f7f">#!/usr/bin/env python3</span>
+<span style="color:#fff;font-weight:bold">import</span> argparse
+<span style="color:#fff;font-weight:bold">import</span> os
+<span style="color:#fff;font-weight:bold">import</span> subprocess
+<span style="color:#fff;font-weight:bold">from</span> typing <span style="color:#fff;font-weight:bold">import</span> Optional
+
+<span style="color:#fff;font-weight:bold">import</span> pyperclip
+
+
+AWS_PROFILE = os.getenv(<span style="color:#0ff;font-weight:bold">&#39;AWS_PROFILE&#39;</span>)
+
+
+<span style="color:#fff;font-weight:bold">def</span> cp_files(from_loc: <span style="color:#fff;font-weight:bold">str</span>, to_loc: <span style="color:#fff;font-weight:bold">str</span>, dryrun: <span style="color:#fff;font-weight:bold">bool</span>, single_file: <span style="color:#fff;font-weight:bold">bool</span>, run: <span style="color:#fff;font-weight:bold">bool</span> = True) -&gt; Optional[<span style="color:#fff;font-weight:bold">str</span>]:
+    flags = <span style="color:#0ff;font-weight:bold">&#39;--acl bucket-owner-full-control&#39;</span>  <span style="color:#007f7f"># always want this</span>
+
+    <span style="color:#fff;font-weight:bold">if</span> AWS_PROFILE:  <span style="color:#007f7f"># want this if it is set as an env var</span>
+        flags += f<span style="color:#0ff;font-weight:bold">&#39; --profile {AWS_PROFILE}&#39;</span>
+    <span style="color:#fff;font-weight:bold">if</span> dryrun:
+        flags += <span style="color:#0ff;font-weight:bold">&#39; --dryrun&#39;</span>
+    <span style="color:#fff;font-weight:bold">if</span> not single_file:  <span style="color:#007f7f"># assume recursive unless told otherwise</span>
+        flags += <span style="color:#0ff;font-weight:bold">&#39; --recursive&#39;</span>
+
+    cmd = f<span style="color:#0ff;font-weight:bold">&#39;aws s3 cp {from_loc} {to_loc} {flags}&#39;</span>
+
+    <span style="color:#fff;font-weight:bold">if</span> run:
+        subprocess.run(cmd, shell=True)
+    <span style="color:#fff;font-weight:bold">else</span>:
+        <span style="color:#fff;font-weight:bold">return</span> cmd
+
+
+<span style="color:#fff;font-weight:bold">if</span> __name__ == <span style="color:#0ff;font-weight:bold">&#39;__main__&#39;</span>:
+    parser = argparse.ArgumentParser(prog=<span style="color:#0ff;font-weight:bold">&#39;awscp&#39;</span>, description=<span style="color:#0ff;font-weight:bold">&#39;Copy S3 files with acl, profile, and recursive flags added automatically&#39;</span>)
+    parser.add_argument(<span style="color:#0ff;font-weight:bold">&#39;from_loc&#39;</span>, help=<span style="color:#0ff;font-weight:bold">&#39;S3 path to copy from&#39;</span>)
+    parser.add_argument(<span style="color:#0ff;font-weight:bold">&#39;to_loc&#39;</span>, help=<span style="color:#0ff;font-weight:bold">&#39;S3 path to copy to&#39;</span>)
+    parser.add_argument(<span style="color:#0ff;font-weight:bold">&#39;--dryrun&#39;</span>, help=<span style="color:#0ff;font-weight:bold">&#39;dryrun the S3 copy&#39;</span>, action=<span style="color:#0ff;font-weight:bold">&#39;store_true&#39;</span>)
+    parser.add_argument(<span style="color:#0ff;font-weight:bold">&#39;--single_file&#39;</span>, help=<span style="color:#0ff;font-weight:bold">&#39;Copy a single file, otherwise assumes recursive copy&#39;</span>, action=<span style="color:#0ff;font-weight:bold">&#39;store_true&#39;</span>)
+    parser.add_argument(<span style="color:#0ff;font-weight:bold">&#39;--clipboard&#39;</span>, help=<span style="color:#0ff;font-weight:bold">&#39;Copy command to clipboard instead of running&#39;</span>, action=<span style="color:#0ff;font-weight:bold">&#39;store_true&#39;</span>)
+    args = parser.parse_args()
+
+    <span style="color:#fff;font-weight:bold">if</span> args.clipboard:  <span style="color:#007f7f"># helpful if you want to Slack the command to someone</span>
+        pyperclip.copy(cp_files(args.from_loc, args.to_loc, args.dryrun, args.single_file, run=False))
+    <span style="color:#fff;font-weight:bold">else</span>:
+        cp_files(args.from_loc, args.to_loc, args.dryrun, args.single_file)
+</code></pre></div><p>The cool thing about argparse is that, as long as you fill in the program description and help for each argument, you get all of this help output basically for free:</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">$ awscp -h
+usage: awscp [-h] [--dryrun] [--single_file] [--clipboard] from_loc to_loc
+
+Copy S3 files with acl, profile, and recursive flags added automatically
+
+positional arguments:
+  from_loc       S3 path to copy from
+  to_loc         S3 path to copy to
+
+optional arguments:
+  -h, --help     show this help message and exit
+  --dryrun       dryrun the S3 copy
+  --single_file  Copy a single file, otherwise assumes recursive copy
+  --clipboard    Copy command to clipboard instead of running
+</code></pre></div><h2 id="a-few-follow-up-things">
+  a few follow up things
+  <a class="heading-link" href="#a-few-follow-up-things">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<ul>
+<li>put your CLI scripts in a single folder and version control it if you can. I use <code>/usr/local/scripts</code></li>
+<li>add the scripts folder to your path by adding an export line to your .bashrc/.zshrc/etc. This will let you run the script from any folder.
+<ul>
+<li><code>export PATH=&quot;/usr/local/scripts:${PATH}&quot;</code></li>
+</ul>
+</li>
+<li>save the script without the .py extension to make it look more unix-like. I saved this script as <code>awscp</code></li>
+<li>put a shebang as the first line of your script so it is correctly executed as a python program, even without the .py extension &ndash; <code>#!/usr/bin/env python3</code></li>
+<li>don&rsquo;t forget to make your script executable with chmod &ndash; <code>$ chmod +x awscp</code></li>
+<li>also don&rsquo;t name your script the same as an existing shell script unless you want to confuse yourself</li>
+</ul>
+<h3 id="other-python-cli-libraries">
+  other Python CLI libraries
+  <a class="heading-link" href="#other-python-cli-libraries">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h3>
+<p>There are other cool libraries for making Python CLIs. <a href="https://typer.tiangolo.com/">Typer</a> seems especially cool and I&rsquo;ll learn how to use it some day but argparse is what I know now. Use the tool you know when it&rsquo;s crunchtime and try to use the tool you want to know if you have some extra time to do a task.</p>
+<h2 id="summary">
+  summary
+  <a class="heading-link" href="#summary">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<p>The next time you find yourself copying a semi-complex CLI command with multiple flags into Evernote to remember it for the next time, stop and see if you can instead simplify it with your own version of the tool.</p>
+<h2 id="links">
+  links
+  <a class="heading-link" href="#links">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<ul>
+<li><a href="https://docs.python.org/3/library/argparse.html">argparse documentation</a></li>
+<li><a href="https://aws.amazon.com/cli/">AWS CLI homepage</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Shebang_(Unix)">Shebang wikipedia article</a></li>
+<li><a href="https://stackoverflow.com/a/19305076">Great Stackoverflow answer on the correct Python shebang to use</a></li>
+<li>the code above can be found in the code folder of the <a href="https://github.com/joeeoj/mike-yu">source code for this website</a></li>
+</ul>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+      </div>
+
+      
+  <footer class="footer">
+    <section class="container">
+      
+      
+        ©
+        
+          2021 -
+        
+        2022
+         Mike Yu 
+      
+      
+         · 
+        Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+      
+      
+    </section>
+  </footer>
+
+
+    </main>
+
+    
+      
+        
+        <script src="/js/dark-mode.min.aee9c8a464eb7b3534c7110f7c5e169e7039e2fd92710e0626d451d6725af137.js" integrity="sha256-runIpGTrezU0xxEPfF4WnnA54v2ScQ4GJtRR1nJa8Tc="></script>
+      
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+  </body>
+
+</html>

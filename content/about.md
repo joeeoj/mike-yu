@@ -5,9 +5,9 @@ slug = "about"
 
 ## Fun facts
 
-* Favorite book: Where the Wild Things Are
-* Favorite beer: Bodhizafa IPA
-* Once was chased by a moose in Alaska. Do not recommend.
+* Currently Reading: My Year Abroad by Chang-rae Lee
+* Favorite team: Mariners (see [The History of the Seattle Mariners](https://www.youtube.com/watch?v=TIgK56cAjfY))
+* Famously featured in the [Embers Grille Big Triple Challenge](https://www.youtube.com/watch?v=3a4lG5SRLkE) commercial
 
 ## Career
 
@@ -17,16 +17,15 @@ import json
 with open('resume.json') as f:
     resume = json.load(f)
 
-for (age, exp) in zip(range(21, 37, 3), resume):
-    state, job = exp.get('state'), exp.get('job')
-    print(f'{age} -> {state} | {job}')
+for exp in resume:
+    print(f'{exp["state"]} -> {exp["job"]}')
 ```
 
 ```text
->>> 21 -> IL | Music Major
->>> 24 -> GA | Project Manager
->>> 27 -> WA | Business Analyst
->>> 30 -> WA | Solution Architect
->>> 33 -> WA | Senior Data Analyst
->>> 36 -> ?? | Data Engineer ?
+>>> IL -> Music Major
+>>> GA -> Project Manager
+>>> WA -> Business Analyst
+>>> WA -> Solution Architect
+>>> WA -> Data Analyst
+>>> WA -> Senior Data Analyst
 ```

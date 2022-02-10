@@ -1,0 +1,49 @@
+#!/usr/bin/env python3
+"""Copy files on AWS S3
+
+Usage: awscpv2 <from-loc> <to-loc> [--dryrun --single-file --clipboard]
+
+Options:
+    -h --help       Show this screen.
+    --dryrun        Dryrun of the generated S3 copy command (doesn't actually execute)
+    --single-file   Copy a single file, otherwise recursive copy is assumed
+    --clipboard     Copy S3 command to clipboard instead of running it
+
+"""
+import os
+import subprocess
+from typing import Optional
+
+from docopt import docopt
+import pyperclip
+
+
+AWS_PROFILE = os.getenv('AWS_PROFILE')
+
+
+def cp_files(from_loc: str, to_loc: str, dryrun: bool, single_file: bool, run: bool = True) -> Optional[str]:
+    flags = '--acl bucket-owner-full-control'  # always want this
+
+    if AWS_PROFILE:  # want this if it is set as an env var
+        flags += f' --profile {AWS_PROFILE}'
+    if dryrun:
+        flags += ' --dryrun'
+    if not single_file:  # assume recursive unless told otherwise
+        flags += ' --recursive'
+
+    cmd = f'aws s3 cp {from_loc} {to_loc} {flags}'
+
+    if run:
+        subprocess.run(cmd, shell=True)
+    else:
+        return cmd
+
+
+if __name__ == '__main__':
+    args = docopt(__doc__, version='awscp 2.0')
+    from_loc, to_loc = args.get('<from-loc>'), args.get('<to-loc>')
+
+    if args.get('--clipboard'):
+        pyperclip.copy(cp_files(from_loc, to_loc, args.get('--dryrun'), args.get('--single-file'), run=False))
+    else:
+        cp_files(from_loc, to_loc, args.get('--dryrun'), args.get('--single-file'))

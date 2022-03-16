@@ -3,29 +3,9 @@ title = "About Mike"
 slug = "about"
 +++
 
-## Fun facts
-
-* Currently Reading: My Year Abroad by Chang-rae Lee
-* Favorite team: Mariners (see [The History of the Seattle Mariners](https://www.youtube.com/watch?v=TIgK56cAjfY))
-* Famously featured in the [Embers Grille Big Triple Challenge](https://www.youtube.com/watch?v=3a4lG5SRLkE) commercial
-
-## Career
-
-```python
-import json
-
-with open('resume.json') as f:
-    resume = json.load(f)
-
-for exp in resume:
-    print(f'{exp["state"]} -> {exp["job"]}')
-```
-
-```text
->>> IL -> Music Major
->>> GA -> Project Manager
->>> WA -> Business Analyst
->>> WA -> Solution Architect
->>> WA -> Data Analyst
->>> WA -> Senior Data Analyst
-```
+* Last read: Recursion by Blake Crouch
+* Currently reading:
+    * Winners Take All: The Elite Charade of Changing the World by Anand Giridharadas
+    * Future Value: The Battle for Baseball's Soul and How Teams Will Find the Next Superstar by Eric Longenhagen and Kiley McDaniel
+* Favorite team: Mariners
+    * see [The History of the Seattle Mariners](https://www.youtube.com/watch?v=TIgK56cAjfY) by Secret Base

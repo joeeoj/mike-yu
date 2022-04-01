@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="color-scheme" content="light dark">
+    
+    
+
+    <meta name="author" content="Mike Yu">
+    <meta name="description" content="mlbcal - a small repo for downloading MLB game schedules">
+    <meta name="keywords" content="website,portfolio,resume,blog,yu">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="mlbcal"/>
+<meta name="twitter:description" content="mlbcal - a small repo for downloading MLB game schedules"/>
+
+    <meta property="og:title" content="mlbcal" />
+<meta property="og:description" content="mlbcal - a small repo for downloading MLB game schedules" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mike-yu.com/posts/mlbcal/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-04-01T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2022-04-01T00:00:00&#43;00:00" />
+
+
+
+    <title>
+  mlbcal · Mike Yu
+</title>
+
+    
+      <link rel="canonical" href="https://mike-yu.com/posts/mlbcal/">
+    
+
+    
+    
+    <link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.1.7" as="font" type="font/woff2" integrity="sha256-hEIt6X6xzye8ubyk8/uxjz68cRZHsJxoKS9fQ8idUGQ=" crossorigin>
+
+    
+      
+      
+      <link rel="stylesheet" href="/css/coder.min.abe8b6775d85a01169c10329309df501aa8a008ab354002f7858f077cae76020.css" integrity="sha256-q&#43;i2d12FoBFpwQMpMJ31AaqKAIqzVAAveFjwd8rnYCA=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+      
+        
+        
+        <link rel="stylesheet" href="/css/coder-dark.min.89c82b6022b96f77aeb521b240daec4f87ea029d84d1c78b8acd0735b91b3c92.css" integrity="sha256-icgrYCK5b3eutSGyQNrsT4fqAp2E0ceLis0HNbkbPJI=" crossorigin="anonymous" media="screen" />
+      
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16">
+
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+    
+      <script defer src="https://twemoji.maxcdn.com/v/13.0.1/twemoji.min.js"
+        integrity="sha384-5f4X0lBluNY/Ib4VhGx0Pf6iDCF99VGXJIyYy7dDLY5QlEd7Ap0hICSSZA1XYbc4" crossorigin="anonymous"></script>
+    
+
+    <meta name="generator" content="Hugo 0.81.0" />
+  </head>
+
+  
+  
+    
+  
+  <body class="colorscheme-auto"
+        onload=" twemoji.parse(document.body); "
+  >
+    
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/">
+      Mike Yu
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/projects/">Projects</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/posts/">Blog</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="https://mike-yu.com/posts/mlbcal/">
+              mlbcal
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <time datetime='2022-04-01T00:00:00Z'>
+                April 1, 2022
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              7-minute read
+            </span>
+          </div>
+          
+          
+          <div class="tags">
+  <i class="fa fa-tag" aria-hidden="true"></i>
+    <a href="/tags/python/">python</a>
+      <span class="separator">•</span>
+    <a href="/tags/baseball/">baseball</a>
+      <span class="separator">•</span>
+    <a href="/tags/cli/">CLI</a></div>
+
+        </div>
+      </header>
+
+      <div>
+        
+        <p>I enjoy baseball and was glad when the lockout finally ended. Like many other people I soon found myself constantly refreshing the MLB website for the updated game schedule which is probably why this happened:</p>
+<p><img src="/mlbcal-post/mlb404.png" alt="MLB.com 404 when the lockout ended"></p>
+<p>But what I actually wanted was the Mariners schedule as a CSV to make it easier to filter and sort to figure out which games I could go to this year. Last year I wrote a script to do just that for Mariners games and now seemed like a good time to add a few more features I wanted:</p>
+<ul>
+<li>enable usage for all MLB teams</li>
+<li>make it pip installable for better distribution</li>
+<li>have a nicer interface &ndash; <code>$ mlbcal &lt;command&gt;</code> instead of <code>$ python ./script.py &lt;command&gt;</code></li>
+</ul>
+<p>The end result was <a href="https://pypi.org/project/mlbcal/">mlbcal</a>. This post is a brief explanation of the project design and some things I learned along the way, mainly around packaging.</p>
+<h2 id="schedule-endpoint">
+  schedule endpoint
+  <a class="heading-link" href="#schedule-endpoint">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<p>Both my original script and mlbcal center around the MLB Stats API schedule endpoint:</p>
+<p><code>https://statsapi.mlb.com/api/v1/schedule</code></p>
+<p>At a minimum it needs three parameters:</p>
+<ul>
+<li><code>teamId</code></li>
+<li><code>startDate</code> - dates are expected in MM/DD/YYYY format</li>
+<li><code>endDate</code></li>
+</ul>
+<p>It outputs out a list of days and within each day a list of games and the original script unfurled this into a flat structure. By default it includes pre, reg, and post season games. I was able to figure out the Mariners teamId (136) by using the Network tab of the Chrome Dev-Tools console while viewing a page on the <a href="https://www.mlb.com/mariners/schedule/2022-04">MLB Mariners schedule</a>. As you can see from the screenshot the endpoint can take many more parameters but I wanted to strip it down to the bare minimum for simplicity.</p>
+<p><img src="/mlbcal-post/chrome-devtools-network.png" alt="Network tab"></p>
+<h2 id="team-endpoint">
+  team endpoint
+  <a class="heading-link" href="#team-endpoint">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<p>I was able to isolate the teamId for my home team but the main thing I wanted to add was support for all teams. This meant creating a team name to team id lookup table but I wanted to avoid complicated name parsing logic if possible. I intially considering creating this list manually, which would have been tedious but doable, but after poking around the <a href="https://github.com/toddrob99/MLB-StatsAPI/wiki/Endpoints#endpoint-teams">MLB-StatsAPI wiki</a> I found the teams endpoint:</p>
+<p><code>https://statsapi.mlb.com/api/v1/teams</code></p>
+<p>It needs a minimum of two parameters:</p>
+<ul>
+<li><code>sportId</code> - The default value is 1 which probably = MLB. I&rsquo;m not sure what the other values are.</li>
+<li><code>season</code> - the year of the season in YYYY format</li>
+</ul>
+<p>This returns a json list of teams with a lot of info but the main things I needed were the teamId and different representations of the team names. After some trial and error I settled on parsing out these: abbreviation, teamCode, clubName, and shortName.</p>
+<p>This was then converted into a json dict of teamId -&gt; list team names (lowercased) and saved in the repo. The team lookup function loads the json file into memory and iterates through all keys, returning the key for the first result where the input search value is in the list of team names. I was fine with the looping method rather than something more performant because it was easy to write and understand and in this case n=30, so no need for optimization.</p>
+<p>So in practice you could look up &ldquo;CWS&rdquo;, &ldquo;CHA&rdquo;, &ldquo;White Sox&rdquo;, or &ldquo;Chi White Sox&rdquo; (case insensitive) you get back 145 as the teamId. It&rsquo;s not 100% name coverage but I think it&rsquo;s good enough especially since it has the two common three character abbreviations. Plus it has the benefit of being easy to update by re-running the utility script if new teams are added to the league in the future.</p>
+<p><em>Note: I found a bug while writing this post where three pairs of teams shared the same franchiseName value: &ldquo;New York&rdquo; for NYA/NYN, &ldquo;Chicago&rdquo; for CHA/CHN, and &ldquo;Los Angeles&rdquo; for LAA/LAN. I publishing a fix that removed franchiseName from the list of parsed out team names to remove this ambiguity.</em></p>
+<h2 id="final-design-and-organization">
+  final design and organization
+  <a class="heading-link" href="#final-design-and-organization">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<p>I settled on a command line interface that got the team input from the user, translated that into a teamId, generated and requested the schedule endpoint url with the given teamId and the full year as the start and end dates, and then return a trimmed version of the output either as json or csv to stdout which needs to be redirected into a file by the user. This last part was to avoid writing code that opened and saved files and thus further reduce code complexity.</p>
+<p>In terms of code organization after some initial missteps with OOP design (scope creep!) I opted for a barebones approach. I the logic and parsing in main.py and put anything related to creating or reading the teams.json lookup file into a utils folder. I also added a download function within utils/download_teams.py to be used in both the utils functions and main.py. It is a replacement of requests.get using urllib to remove all external dependencies. In retrospect I would have left in the requests because the location of this shared download function is confusing (it&rsquo;s not a util if main.py uses it directly) and requests is a light dependency. That said, the package has no external dependencies as it is written now.</p>
+<h2 id="packaging-problems">
+  packaging problems
+  <a class="heading-link" href="#packaging-problems">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<p>My main struggle with completing this project was packaging. Up until this point my experience with packaging was for internal teams so I never used PyPI to open source a project and I avoiding building distributions by having users install in editable mode (<code>pip install . -e</code>). My main reference for figuring this out was the <a href="https://packaging.python.org/en/latest/tutorials/packaging-projects/">Packaging Python Projects</a> documentation. It was incredibly helpful for guiding me through the process and I highly recommend it.</p>
+<p>Here are some helpful things I learned during the packaging process:</p>
+<ul>
+<li>Constantly running into <code>ModuleNotFoundError</code> while testing locally? Add your project path to your PYTHONPATH in your bashrc/zshrc file. I never really knew what this was for and started testing out path manipulation before I figured out it was for testing out a project, with internal imports, before you&rsquo;ve pip installed it
+<ul>
+<li><code>export PYTHONPATH=&quot;${PYTHONPATH}:/Users/you/path/to/project/&quot;</code></li>
+</ul>
+</li>
+<li>importlib is a cool way to import and use files within your package (built-in as of 3.7). I originally was trying to use pathlib which was the wrong way to do it because it is relative to your current location instead of a fixed package location</li>
+<li>You can most likely use setup.cfg instead of setup.py. This is confusing because a lot of tutorials demonstrate setup.py because it was the defacto for so long but the new way is setup.cfg unless you need python logic in your setup script (you probably don&rsquo;t)</li>
+<li>Extra non-code files will <strong>not</strong> be included in your dist/ folder by default (teams.json lookup file in my case) but uou can specify to include them in the MANIFEST.in file</li>
+<li>TestPyPI is a test instance of PyPI with separate login credentials. Upload your package there first and try to install from there <strong>before you upload to PyPI</strong></li>
+<li>If you fix some bugs after uploading to TestPyPI and want to re-upload (same goes for the official PyPI), you need to remember to do two things:
+<ol>
+<li><strong>increment your project version in setup.cfg</strong> &ndash; I forgot to do this many times :(</li>
+<li>rebuild the distribution</li>
+</ol>
+</li>
+<li>After installing twine, configure your .pypirc file with credentials for both TestPyPI and PyPI. Or better yet create creds scoped for specific projects. In my case I created a <code>[testpypi]</code> entry for anything uploaded to that and then I created a separate <code>[mlbcal]</code> entry for the official PyPI just for this project. Here&rsquo;s an example for uploading to TestPyPI:
+<ul>
+<li><code>$ python -m build</code> &ndash; build dist files</li>
+<li><code>$ python -m twine upload --repository testpypi dist/*</code> &ndash; upload current folder dist files to TestPyPI</li>
+</ul>
+</li>
+</ul>
+<h2 id="summary">
+  summary
+  <a class="heading-link" href="#summary">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<p>Putting together a simple project like this was a good hands on way to learn how to package and publish a Python project and I recommend this approach to anyone wanting to learn it. Definitely reference the official docs while you&rsquo;re doing it as they are very helpful. It was also interesting dealing with scope creep in a non-work project. I think having a sense of urgency (i.e. baseball season starting soon) with the release timeline helped me quickly decide which additional scope items I should keep and which were just pushing back the release.</p>
+<h2 id="links">
+  links
+  <a class="heading-link" href="#links">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<ul>
+<li><a href="https://github.com/joeeoj/mgames">https://github.com/joeeoj/mgames</a> &ndash; original script</li>
+<li><a href="https://github.com/joeeoj/mlbcal">https://github.com/joeeoj/mlbcal</a> &ndash; mlbcal GitHub repo</li>
+<li><a href="https://pypi.org/project/mlbcal/">https://pypi.org/project/mlbcal/</a> &ndash; mlbcal PyPI</li>
+<li><a href="https://github.com/toddrob99/MLB-StatsAPI/wiki">https://github.com/toddrob99/MLB-StatsAPI/wiki</a> &ndash; wiki for the MLB-StatsAPI Python package</li>
+<li><a href="https://packaging.python.org/en/latest/tutorials/packaging-projects/">https://packaging.python.org/en/latest/tutorials/packaging-projects/</a> &ndash; Python packaging docs</li>
+<li><a href="https://packaging.python.org/en/latest/guides/using-manifest-in/#using-manifest-in">https://packaging.python.org/en/latest/guides/using-manifest-in/#using-manifest-in</a> &ndash; docs on MANIFEST.in</li>
+</ul>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+      </div>
+
+      
+  <footer class="footer">
+    <section class="container">
+      
+      
+        ©
+        
+          2021 -
+        
+        2022
+         Mike Yu 
+      
+      
+         · 
+        Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+      
+      
+    </section>
+  </footer>
+
+
+    </main>
+
+    
+      
+        
+        <script src="/js/dark-mode.min.aee9c8a464eb7b3534c7110f7c5e169e7039e2fd92710e0626d451d6725af137.js" integrity="sha256-runIpGTrezU0xxEPfF4WnnA54v2ScQ4GJtRR1nJa8Tc="></script>
+      
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+  </body>
+
+</html>

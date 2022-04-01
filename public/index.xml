@@ -6,7 +6,17 @@
     <description>Recent content on Mike Yu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 10 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://mike-yu.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 01 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://mike-yu.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>mlbcal</title>
+      <link>https://mike-yu.com/posts/mlbcal/</link>
+      <pubDate>Fri, 01 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://mike-yu.com/posts/mlbcal/</guid>
+      <description>I enjoy baseball and was glad when the lockout finally ended. Like many other people I soon found myself constantly refreshing the MLB website for the updated game schedule which is probably why this happened:
+But what I actually wanted was the Mariners schedule as a CSV to make it easier to filter and sort to figure out which games I could go to this year. Last year I wrote a script to do just that for Mariners games and now seemed like a good time to add a few more features I wanted:</description>
+    </item>
+    
     <item>
       <title>trying out docopt</title>
       <link>https://mike-yu.com/posts/trying-out-docopt/</link>
@@ -33,7 +43,7 @@ Well, here it is in 43 lines (with proper spacing) using argparse:</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mike-yu.com/about/</guid>
-      <description> Last read: Recursion by Blake Crouch Currently reading:  Winners Take All: The Elite Charade of Changing the World by Anand Giridharadas Future Value: The Battle for Baseball&amp;rsquo;s Soul and How Teams Will Find the Next Superstar by Eric Longenhagen and Kiley McDaniel   Favorite team: Mariners  see The History of the Seattle Mariners by Secret Base    </description>
+      <description> Last read:  Recursion by Blake Crouch The Midnight Library by Matt Haig   Currently reading:  Winners Take All: The Elite Charade of Changing the World by Anand Giridharadas Future Value: The Battle for Baseball&amp;rsquo;s Soul and How Teams Will Find the Next Superstar by Eric Longenhagen and Kiley McDaniel   Favorite team: Mariners  see The History of the Seattle Mariners by Secret Base    </description>
     </item>
     
     <item>

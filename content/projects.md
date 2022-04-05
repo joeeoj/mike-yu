@@ -9,13 +9,19 @@ https://github.com/joeeoj/mlbcal
 
 A pip-installable project that is a CLI wrapper around the MLB Stats API schedule endpoint.
 
-Usage:
+Example usage:
 
-`$ mlbcal seattle --csv --nopre > mariners_2022.csv`
+`$ mlbcal seattle --csv --nopre > mariners_schedule.csv`
+
+## lahnman-to-duckdb
+
+https://github.com/joeeoj/lahnman-to-duckdb
+
+A wrapper around the [baseballdatabank](https://github.com/chadwickbureau/baseballdatabank) (aka Lahnman database) to convert the CSV files into a [DuckDB](https://duckdb.org/) database for faster, local analytics of baseball data. DuckDB is kind of like the OLAP version of SQLite.
+
+Example queries against the database can be found here: [examples.ipynb](https://nbviewer.org/github/joeeoj/lahnman-to-duckdb/blob/main/src/analysis/examples.ipynb)
 
 ## recipes
-
-https://github.com/joeeoj/recipes
 
 http://whatsfordinner.recipes/
 
@@ -25,6 +31,6 @@ A static website, hosted by Netlify, with my favorite recipes and some editorial
 
 https://github.com/joeeoj/fantasy-football
 
-Project to learn NFL fantasy football strategy and practice some data analysis and data engineering skills too.
+Project to learn NFL fantasy football strategy while practicing analysis and engineering skills.
 
-2021-2022 results: 3rd place
+2021-2022 season results: 3rd place

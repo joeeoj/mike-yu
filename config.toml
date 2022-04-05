@@ -73,6 +73,10 @@ pygmentsCodeFencesGuessSyntax = true
   name = "Blog"
   weight = 3
   url  = "posts/"
+[[menu.main]]
+  name = "Reading"
+  weight = 4
+  url  = "reading/"
 # [[menu.main]]
 #   name = "Contact"
 #   weight = 4

@@ -113,6 +113,10 @@
               <a class="navigation-link" href="/posts/">Blog</a>
             </li>
           
+            <li class="navigation-item">
+              <a class="navigation-link" href="/reading/">Reading</a>
+            </li>
+          
         
         
       </ul>
@@ -201,8 +205,8 @@
 </ul>
 <p>This returns a json list of teams with a lot of info but the main things I needed were the teamId and different representations of the team names. After some trial and error I settled on parsing out these: abbreviation, teamCode, clubName, and shortName.</p>
 <p>This was then converted into a json dict of teamId -&gt; list team names (lowercased) and saved in the repo. The team lookup function loads the json file into memory and iterates through all keys, returning the key for the first result where the input search value is in the list of team names. I was fine with the looping method rather than something more performant because it was easy to write and understand and in this case n=30, so no need for optimization.</p>
-<p>So in practice you could look up &ldquo;CWS&rdquo;, &ldquo;CHA&rdquo;, &ldquo;White Sox&rdquo;, or &ldquo;Chi White Sox&rdquo; (case insensitive) you get back 145 as the teamId. It&rsquo;s not 100% name coverage but I think it&rsquo;s good enough especially since it has the two common three character abbreviations. Plus it has the benefit of being easy to update by re-running the utility script if new teams are added to the league in the future.</p>
-<p><em>Note: I found a bug while writing this post where three pairs of teams shared the same franchiseName value: &ldquo;New York&rdquo; for NYA/NYN, &ldquo;Chicago&rdquo; for CHA/CHN, and &ldquo;Los Angeles&rdquo; for LAA/LAN. I publishing a fix that removed franchiseName from the list of parsed out team names to remove this ambiguity.</em></p>
+<p>So in practice you could look up &ldquo;CWS&rdquo;, &ldquo;CHA&rdquo;, &ldquo;White Sox&rdquo;, or &ldquo;Chi White Sox&rdquo; (case insensitive) and they would all return 145 as the teamId. It&rsquo;s not 100% name coverage but I think it&rsquo;s good enough especially since it includes the two common three character abbreviations. Plus it has the benefit of being easy to update by re-running the utility script if new teams are added to the league in the future.</p>
+<p><em>Note: I found a bug while writing this post where three pairs of teams shared the same franchiseName value: &ldquo;New York&rdquo; for NYA/NYN, &ldquo;Chicago&rdquo; for CHA/CHN, and &ldquo;Los Angeles&rdquo; for LAA/LAN. I publishing a fix that removed franchiseName from the list of parsed out team names to eliminate this ambiguity.</em></p>
 <h2 id="final-design-and-organization">
   final design and organization
   <a class="heading-link" href="#final-design-and-organization">
@@ -227,7 +231,7 @@
 </li>
 <li>importlib is a cool way to import and use files within your package (built-in as of 3.7). I originally was trying to use pathlib which was the wrong way to do it because it is relative to your current location instead of a fixed package location</li>
 <li>You can most likely use setup.cfg instead of setup.py. This is confusing because a lot of tutorials demonstrate setup.py because it was the defacto for so long but the new way is setup.cfg unless you need python logic in your setup script (you probably don&rsquo;t)</li>
-<li>Extra non-code files will <strong>not</strong> be included in your dist/ folder by default (teams.json lookup file in my case) but uou can specify to include them in the MANIFEST.in file</li>
+<li>Extra non-code files will <strong>not</strong> be included in your dist/ folder by default (teams.json lookup file in my case) but you can specify to include them in the MANIFEST.in file</li>
 <li>TestPyPI is a test instance of PyPI with separate login credentials. Upload your package there first and try to install from there <strong>before you upload to PyPI</strong></li>
 <li>If you fix some bugs after uploading to TestPyPI and want to re-upload (same goes for the official PyPI), you need to remember to do two things:
 <ol>

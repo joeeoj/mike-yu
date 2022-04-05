@@ -10,15 +10,21 @@
     
 
     <meta name="author" content="Mike Yu">
-    <meta name="description" content=" Last read:  Recursion by Blake Crouch The Midnight Library by Matt Haig   Currently reading:  Winners Take All: The Elite Charade of Changing the World by Anand Giridharadas Future Value: The Battle for Baseball&rsquo;s Soul and How Teams Will Find the Next Superstar by Eric Longenhagen and Kiley McDaniel   Favorite team: Mariners  see The History of the Seattle Mariners by Secret Base    ">
+    <meta name="description" content="Favorites     Team: Mariners Bike manufacturer: Surly Text editor: Sublime Text Database engine: SQLite (maybe DuckDB soon) Python package: pandas Tech educator: Jake VanderPlas  Frequently used Python patterns    Flatten nested lists:
+from itertools import chain flattened = list(chain.from_iterable([[1, 2, 3], [4, 5, 6], [7, 8, 9]])) csv.DictReader instead of csv.reader:
+with open(&#39;file.csv&#39;) as f: csvreader = csv.DictReader(f) for row in csvreader: val = row[&#39;col_name&#39;] Turn a key/value list into dict of key -&gt; list of values:">
     <meta name="keywords" content="website,portfolio,resume,blog,yu">
 
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="About Mike"/>
-<meta name="twitter:description" content=" Last read:  Recursion by Blake Crouch The Midnight Library by Matt Haig   Currently reading:  Winners Take All: The Elite Charade of Changing the World by Anand Giridharadas Future Value: The Battle for Baseball&rsquo;s Soul and How Teams Will Find the Next Superstar by Eric Longenhagen and Kiley McDaniel   Favorite team: Mariners  see The History of the Seattle Mariners by Secret Base    "/>
+<meta name="twitter:description" content="Favorites     Team: Mariners Bike manufacturer: Surly Text editor: Sublime Text Database engine: SQLite (maybe DuckDB soon) Python package: pandas Tech educator: Jake VanderPlas  Frequently used Python patterns    Flatten nested lists:
+from itertools import chain flattened = list(chain.from_iterable([[1, 2, 3], [4, 5, 6], [7, 8, 9]])) csv.DictReader instead of csv.reader:
+with open(&#39;file.csv&#39;) as f: csvreader = csv.DictReader(f) for row in csvreader: val = row[&#39;col_name&#39;] Turn a key/value list into dict of key -&gt; list of values:"/>
 
     <meta property="og:title" content="About Mike" />
-<meta property="og:description" content=" Last read:  Recursion by Blake Crouch The Midnight Library by Matt Haig   Currently reading:  Winners Take All: The Elite Charade of Changing the World by Anand Giridharadas Future Value: The Battle for Baseball&rsquo;s Soul and How Teams Will Find the Next Superstar by Eric Longenhagen and Kiley McDaniel   Favorite team: Mariners  see The History of the Seattle Mariners by Secret Base    " />
+<meta property="og:description" content="Favorites     Team: Mariners Bike manufacturer: Surly Text editor: Sublime Text Database engine: SQLite (maybe DuckDB soon) Python package: pandas Tech educator: Jake VanderPlas  Frequently used Python patterns    Flatten nested lists:
+from itertools import chain flattened = list(chain.from_iterable([[1, 2, 3], [4, 5, 6], [7, 8, 9]])) csv.DictReader instead of csv.reader:
+with open(&#39;file.csv&#39;) as f: csvreader = csv.DictReader(f) for row in csvreader: val = row[&#39;col_name&#39;] Turn a key/value list into dict of key -&gt; list of values:" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://mike-yu.com/about/" /><meta property="article:section" content="" />
 
@@ -113,6 +119,10 @@
               <a class="navigation-link" href="/posts/">Blog</a>
             </li>
           
+            <li class="navigation-item">
+              <a class="navigation-link" href="/reading/">Reading</a>
+            </li>
+          
         
         
       </ul>
@@ -133,26 +143,60 @@
       </h1>
     </header>
 
-    <ul>
-<li>Last read:
+    <h2 id="favorites">
+  Favorites
+  <a class="heading-link" href="#favorites">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
 <ul>
-<li>Recursion by Blake Crouch</li>
-<li>The Midnight Library by Matt Haig</li>
+<li>Team: Mariners</li>
+<li>Bike manufacturer: Surly</li>
+<li>Text editor: Sublime Text</li>
+<li>Database engine: SQLite (maybe DuckDB soon)</li>
+<li>Python package: pandas</li>
+<li>Tech educator: Jake VanderPlas</li>
 </ul>
-</li>
-<li>Currently reading:
-<ul>
-<li>Winners Take All: The Elite Charade of Changing the World by Anand Giridharadas</li>
-<li>Future Value: The Battle for Baseball&rsquo;s Soul and How Teams Will Find the Next Superstar by Eric Longenhagen and Kiley McDaniel</li>
-</ul>
-</li>
-<li>Favorite team: Mariners
-<ul>
-<li>see <a href="https://www.youtube.com/watch?v=TIgK56cAjfY">The History of the Seattle Mariners</a> by Secret Base</li>
-</ul>
-</li>
-</ul>
+<h2 id="frequently-used-python-patterns">
+  Frequently used Python patterns
+  <a class="heading-link" href="#frequently-used-python-patterns">
+    <i class="fa fa-link" aria-hidden="true"></i>
+  </a>
+</h2>
+<p>Flatten nested lists:</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#fff;font-weight:bold">from</span> itertools <span style="color:#fff;font-weight:bold">import</span> chain
 
+flattened = <span style="color:#fff;font-weight:bold">list</span>(chain.from_iterable([[<span style="color:#ff0;font-weight:bold">1</span>, <span style="color:#ff0;font-weight:bold">2</span>, <span style="color:#ff0;font-weight:bold">3</span>], [<span style="color:#ff0;font-weight:bold">4</span>, <span style="color:#ff0;font-weight:bold">5</span>, <span style="color:#ff0;font-weight:bold">6</span>], [<span style="color:#ff0;font-weight:bold">7</span>, <span style="color:#ff0;font-weight:bold">8</span>, <span style="color:#ff0;font-weight:bold">9</span>]]))
+</code></pre></div><p>csv.DictReader instead of csv.reader:</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#fff;font-weight:bold">with</span> <span style="color:#fff;font-weight:bold">open</span>(<span style="color:#0ff;font-weight:bold">&#39;file.csv&#39;</span>) <span style="color:#fff;font-weight:bold">as</span> f:
+    csvreader = csv.DictReader(f)
+    <span style="color:#fff;font-weight:bold">for</span> row in csvreader:
+        val = row[<span style="color:#0ff;font-weight:bold">&#39;col_name&#39;</span>]
+</code></pre></div><p>Turn a key/value list into dict of key -&gt; list of values:</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#fff;font-weight:bold">from</span> collections <span style="color:#fff;font-weight:bold">import</span> defaultdict
+
+d = defaultdict(<span style="color:#fff;font-weight:bold">list</span>)
+<span style="color:#fff;font-weight:bold">for</span> row in rows:
+    key, val = row
+    d[key].append(val)
+</code></pre></div><p>Parse a table on a website:</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#fff;font-weight:bold">import</span> bs4
+<span style="color:#fff;font-weight:bold">import</span> requests
+
+r = requests.get(url)
+soup = bs4.BeautifulSoup(r.content, <span style="color:#0ff;font-weight:bold">&#39;html.parser&#39;</span>)
+table = soup.find(<span style="color:#0ff;font-weight:bold">&#39;table&#39;</span>, <span style="color:#fff;font-weight:bold">id</span>=<span style="color:#0ff;font-weight:bold">&#39;table-hopefully-labeled-by-id&#39;</span>)
+rows = table.find_all(<span style="color:#0ff;font-weight:bold">&#39;tr&#39;</span>)
+
+parsed_results = []
+<span style="color:#fff;font-weight:bold">for</span> row in rows[<span style="color:#ff0;font-weight:bold">1</span>:]:  <span style="color:#007f7f"># skip header</span>
+    cells = row.find_all(<span style="color:#0ff;font-weight:bold">&#39;td&#39;</span>)
+</code></pre></div><p>Simplify columns in a pandas dataframe:</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#fff;font-weight:bold">import</span> pandas <span style="color:#fff;font-weight:bold">as</span> pd
+
+df = pd.read_csv(<span style="color:#0ff;font-weight:bold">&#39;file.csv&#39;</span>)
+df.columns = [c.strip().replace(<span style="color:#0ff;font-weight:bold">&#39; &#39;</span>, <span style="color:#0ff;font-weight:bold">&#39;_&#39;</span>).lower() <span style="color:#fff;font-weight:bold">for</span> c in df.columns]
+</code></pre></div>
   </article>
 </section>
 

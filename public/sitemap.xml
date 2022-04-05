@@ -35,6 +35,9 @@
     <loc>https://mike-yu.com/posts/argparse-is-cool/</loc>
     <lastmod>2021-07-05T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://mike-yu.com/reading/</loc>
+    <priority>0</priority>
+  </url><url>
     <loc>https://mike-yu.com/about/</loc>
   </url><url>
     <loc>https://mike-yu.com/authors/</loc>

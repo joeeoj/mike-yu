@@ -38,12 +38,23 @@ Well, here it is in 43 lines (with proper spacing) using argparse:</description>
     </item>
     
     <item>
+      <title></title>
+      <link>https://mike-yu.com/reading/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mike-yu.com/reading/</guid>
+      <description>2022     The Quiet Boy by Ben H. Winters Dark Matter by Blake Crouch Recursion by Blake Crouch The Midnight Library by Matt Haig Rock Paper Scissors by Alice Feeney  </description>
+    </item>
+    
+    <item>
       <title>About Mike</title>
       <link>https://mike-yu.com/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mike-yu.com/about/</guid>
-      <description> Last read:  Recursion by Blake Crouch The Midnight Library by Matt Haig   Currently reading:  Winners Take All: The Elite Charade of Changing the World by Anand Giridharadas Future Value: The Battle for Baseball&amp;rsquo;s Soul and How Teams Will Find the Next Superstar by Eric Longenhagen and Kiley McDaniel   Favorite team: Mariners  see The History of the Seattle Mariners by Secret Base    </description>
+      <description>Favorites     Team: Mariners Bike manufacturer: Surly Text editor: Sublime Text Database engine: SQLite (maybe DuckDB soon) Python package: pandas Tech educator: Jake VanderPlas  Frequently used Python patterns    Flatten nested lists:
+from itertools import chain flattened = list(chain.from_iterable([[1, 2, 3], [4, 5, 6], [7, 8, 9]])) csv.DictReader instead of csv.reader:
+with open(&amp;#39;file.csv&amp;#39;) as f: csvreader = csv.DictReader(f) for row in csvreader: val = row[&amp;#39;col_name&amp;#39;] Turn a key/value list into dict of key -&amp;gt; list of values:</description>
     </item>
     
     <item>
@@ -54,13 +65,11 @@ Well, here it is in 43 lines (with proper spacing) using argparse:</description>
       <guid>https://mike-yu.com/projects/</guid>
       <description>mlbcal    https://github.com/joeeoj/mlbcal
 A pip-installable project that is a CLI wrapper around the MLB Stats API schedule endpoint.
-Usage:
-$ mlbcal seattle --csv --nopre &amp;gt; mariners_2022.csv
-recipes    https://github.com/joeeoj/recipes
-http://whatsfordinner.recipes/
-A static website, hosted by Netlify, with my favorite recipes and some editorial notes. Great for last minute dinner planning. Based on Recipes by jeffThompson with modifications by kvpsky.
-fantasy football    https://github.com/joeeoj/fantasy-football
-Project to learn NFL fantasy football strategy and practice some data analysis and data engineering skills too.</description>
+Example usage:
+$ mlbcal seattle --csv --nopre &amp;gt; mariners_schedule.csv
+lahnman-to-duckdb    https://github.com/joeeoj/lahnman-to-duckdb
+A wrapper around the baseballdatabank (aka Lahnman database) to convert the CSV files into a DuckDB database for faster, local analytics of baseball data. DuckDB is kind of like the OLAP version of SQLite.
+Example queries against the database can be found here: examples.</description>
     </item>
     
   </channel>

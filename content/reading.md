@@ -5,3 +5,4 @@
 * Recursion by Blake Crouch
 * The Midnight Library by Matt Haig
 * Rock Paper Scissors by Alice Feeney
+* Devolution by Max Brooks

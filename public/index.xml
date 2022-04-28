@@ -43,7 +43,7 @@ Well, here it is in 43 lines (with proper spacing) using argparse:</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mike-yu.com/reading/</guid>
-      <description>2022     The Quiet Boy by Ben H. Winters Dark Matter by Blake Crouch Recursion by Blake Crouch The Midnight Library by Matt Haig Rock Paper Scissors by Alice Feeney  </description>
+      <description>2022     The Quiet Boy by Ben H. Winters Dark Matter by Blake Crouch Recursion by Blake Crouch The Midnight Library by Matt Haig Rock Paper Scissors by Alice Feeney Devolution by Max Brooks  </description>
     </item>
     
     <item>
@@ -63,13 +63,9 @@ with open(&amp;#39;file.csv&amp;#39;) as f: csvreader = csv.DictReader(f) for ro
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mike-yu.com/projects/</guid>
-      <description>mlbcal    https://github.com/joeeoj/mlbcal
-A pip-installable project that is a CLI wrapper around the MLB Stats API schedule endpoint.
-Example usage:
-$ mlbcal seattle --csv --nopre &amp;gt; mariners_schedule.csv
-lahnman-to-duckdb    https://github.com/joeeoj/lahnman-to-duckdb
-A wrapper around the baseballdatabank (aka Lahnman database) to convert the CSV files into a DuckDB database for faster, local analytics of baseball data. DuckDB is kind of like the OLAP version of SQLite.
-Example queries against the database can be found here: examples.</description>
+      <description>dolthub data bounties    Dolt is Git + MySQL. The company that created it, Dolthub, hosts data bounties to incentivize contribution to certain datasets. It has given me an opportunity to practice a variety of skills such as: Python scripting to scrap data from websites, pandas data manipulation, and writing SQL queries.
+Here are the ones I&amp;rsquo;ve contributed to so far:
+ hospital price transparency (scoreboard) us jails  mlbcal    https://github.</description>
     </item>
     
   </channel>

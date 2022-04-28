@@ -3,6 +3,15 @@ title = "Projects"
 slug = "projects"
 +++
 
+## dolthub data bounties
+
+Dolt is Git + MySQL. The company that created it, [Dolthub](https://www.dolthub.com/), hosts data bounties to incentivize contribution to certain datasets. It has given me an opportunity to practice a variety of skills such as: Python scripting to scrap data from websites, pandas data manipulation, and writing SQL queries.
+
+Here are the ones I've contributed to so far:
+
+* [hospital price transparency](https://github.com/joeeoj/hospital-price-transparency-v3) ([scoreboard](https://www.dolthub.com/repositories/dolthub/hospital-price-transparency-v3/bounties/00b14320-da0f-4374-9c40-73f3ed302aaf/scoreboard))
+* [us jails](https://github.com/joeeoj/us-jails)
+
 ## mlbcal
 
 https://github.com/joeeoj/mlbcal

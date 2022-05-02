@@ -3,20 +3,38 @@ title = "Projects"
 slug = "projects"
 +++
 
+## fantasy football
+
+![fantasy football charts](/projects/fantasy_football_2021_combined_charts_50pct.png)
+
+https://github.com/joeeoj/fantasy-football ([nbviewer link](https://nbviewer.org/github/joeeoj/fantasy-football/tree/main/) to see the Altair graphs)
+
+This was a project to learn NFL fantasy football strategy and practice data wrangling and analysis. It also gave me a chance to try out [Altair](https://altair-viz.github.io/) as an alternative to matplotlib. I ended up getting 3rd place which was a big improvement from second to last the year before. Like most people I still need to do a better job of evaluating and making mid-season trades...
+
 ## dolthub data bounties
 
-Dolt is Git + MySQL. The company that created it, [Dolthub](https://www.dolthub.com/), hosts data bounties to incentivize contribution to certain datasets. It has given me an opportunity to practice a variety of skills such as: Python scripting to scrap data from websites, pandas data manipulation, and writing SQL queries.
+![us-jail code parsing example](/projects/jail_excerpt_50pct.png)
 
-Here are the ones I've contributed to so far:
+Dolt is Git + MySQL. The company that created it, [Dolthub](https://www.dolthub.com/), hosts data bounties to incentivize contribution to datasets. It has given me an opportunity to practice scraping websites with Python, pandas data manipulation, and SQL. Here are the data bounties I've contributed too:
 
-* [hospital price transparency](https://github.com/joeeoj/hospital-price-transparency-v3) ([scoreboard](https://www.dolthub.com/repositories/dolthub/hospital-price-transparency-v3/bounties/00b14320-da0f-4374-9c40-73f3ed302aaf/scoreboard))
-* [us jails](https://github.com/joeeoj/us-jails)
+* [hospital price transparency](https://www.dolthub.com/repositories/dolthub/hospital-price-transparency-v3)
+* [us jails](https://www.dolthub.com/repositories/dolthub/us-jails)
+
+## recipes
+
+![whatsfordinner screenshot](/projects/whatsfordinner.png)
+
+http://whatsfordinner.recipes/
+
+A static website hosted by Netlify with my favorite recipes and some editorial notes. Great for last minute dinner planning. All the credit goes to [jeffThompson](https://github.com/jeffThompson) as this is based on his original [Recipes](https://github.com/jeffThompson/Recipes) website with modifications by [kvpsky](https://github.com/kvpsky). This falls well within the free tier of Netlify so the only cost was the domain for about $10. Adding new recipes is as simple as adding markdown pages, regenerating the html, and pushing changes to main ([repo](https://github.com/joeeoj/recipes)).
 
 ## mlbcal
 
+![MLB schedule endpoint screenshot](/projects/mlb_schedule_endpoint_50pct.png)
+
 https://github.com/joeeoj/mlbcal
 
-A pip-installable project that is a CLI wrapper around the MLB Stats API schedule endpoint.
+A CLI wrapper around the MLB Stats API schedule endpoint to generate csv and json reports of a team's schedule. Publishing this to PyPI helped me better understand Python packaging (pro tip: TestPyPI is great, use it!).
 
 Example usage:
 
@@ -24,22 +42,8 @@ Example usage:
 
 ## lahnman-to-duckdb
 
+![longest tenure player by team example query](/projects/longest_tenure_query_70pct.png)
+
 https://github.com/joeeoj/lahnman-to-duckdb
 
-A wrapper around the [baseballdatabank](https://github.com/chadwickbureau/baseballdatabank) (aka Lahnman database) to convert the CSV files into a [DuckDB](https://duckdb.org/) database for faster, local analytics of baseball data. DuckDB is kind of like the OLAP version of SQLite.
-
-Example queries against the database can be found here: [examples.ipynb](https://nbviewer.org/github/joeeoj/lahnman-to-duckdb/blob/main/src/analysis/examples.ipynb)
-
-## recipes
-
-http://whatsfordinner.recipes/
-
-A static website, hosted by Netlify, with my favorite recipes and some editorial notes. Great for last minute dinner planning. Based on [Recipes](https://github.com/jeffThompson/Recipes) by [jeffThompson](https://github.com/jeffThompson) with modifications by [kvpsky](https://github.com/kvpsky).
-
-## fantasy football
-
-https://github.com/joeeoj/fantasy-football
-
-Project to learn NFL fantasy football strategy while practicing analysis and engineering skills.
-
-2021-2022 season results: 3rd place
+A wrapper around the [baseballdatabank](https://github.com/chadwickbureau/baseballdatabank) (aka Lahnman database) to convert the CSV files into a [DuckDB](https://duckdb.org/) database for faster, local analytics of baseball data. I heard about DuckDB in a [Data Engineering Podcast](https://www.dataengineeringpodcast.com/duckdb-in-process-olap-database-episode-270/) episode. It is kind of like the OLAP version of SQLite.

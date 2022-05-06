@@ -63,8 +63,9 @@ with open(&amp;#39;file.csv&amp;#39;) as f: csvreader = csv.DictReader(f) for ro
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mike-yu.com/projects/</guid>
-      <description>fantasy football    https://github.com/joeeoj/fantasy-football (nbviewer link to see the Altair graphs)
-This was a project to learn NFL fantasy football strategy and practice data wrangling and analysis. It also gave me a chance to try out Altair as an alternative to matplotlib. I ended up getting 3rd place which was a big improvement from second to last the year before. Like most people I still need to do a better job of evaluating and making mid-season trades&amp;hellip;</description>
+      <description>fantasy football    https://github.com/joeeoj/fantasy-football (nbviewer link to render the Altair graphs)
+This was a project to learn NFL fantasy football strategy and practice data wrangling and analysis. It gave me a chance to try out Altair and test out mkdocs for writing project documentation (using this great tutorial by calmcode).
+2021/2022 results: 3rd place &amp;ndash; not bad considering I got second to last the year before (I had no idea what I was doing that year).</description>
     </item>
     
   </channel>

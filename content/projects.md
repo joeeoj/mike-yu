@@ -7,9 +7,11 @@ slug = "projects"
 
 ![fantasy football charts](/projects/fantasy_football_2021_combined_charts_50pct.png)
 
-https://github.com/joeeoj/fantasy-football ([nbviewer link](https://nbviewer.org/github/joeeoj/fantasy-football/tree/main/) to see the Altair graphs)
+https://github.com/joeeoj/fantasy-football ([nbviewer link](https://nbviewer.org/github/joeeoj/fantasy-football/tree/main/) to render the Altair graphs)
 
-This was a project to learn NFL fantasy football strategy and practice data wrangling and analysis. It also gave me a chance to try out [Altair](https://altair-viz.github.io/) as an alternative to matplotlib. I ended up getting 3rd place which was a big improvement from second to last the year before. Like most people I still need to do a better job of evaluating and making mid-season trades...
+This was a project to learn NFL fantasy football strategy and practice data wrangling and analysis. It gave me a chance to try out [Altair](https://altair-viz.github.io/) and test out mkdocs for writing [project documentation](https://joeeoj.github.io/fantasy-football/) (using this [great tutorial by calmcode](https://calmcode.io/mkdocs/intro-to-mkdocs.html)).
+
+2021/2022 results: 3rd place -- not bad considering I got second to last the year before (I had no idea what I was doing that year). Like most people, my biggest area for improvement is evaluating and making trades.
 
 ## dolthub data bounties
 

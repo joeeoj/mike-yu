@@ -4,69 +4,22 @@
     <title>Mike Yu</title>
     <link>https://mike-yu.com/</link>
     <description>Recent content on Mike Yu</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 01 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://mike-yu.com/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>mlbcal</title>
-      <link>https://mike-yu.com/posts/mlbcal/</link>
-      <pubDate>Fri, 01 Apr 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://mike-yu.com/posts/mlbcal/</guid>
-      <description>I enjoy baseball and was glad when the lockout finally ended. Like many other people I soon found myself constantly refreshing the MLB website for the updated game schedule which is probably why this happened:
-But what I actually wanted was the Mariners schedule as a CSV to make it easier to filter and sort to figure out which games I could go to this year. Last year I wrote a script to do just that for Mariners games and now seemed like a good time to add a few more features I wanted:</description>
-    </item>
-    
-    <item>
-      <title>trying out docopt</title>
-      <link>https://mike-yu.com/posts/trying-out-docopt/</link>
-      <pubDate>Thu, 10 Feb 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://mike-yu.com/posts/trying-out-docopt/</guid>
-      <description>trying out docopt    In my last post I created a very small command line interface (CLI) using argparse, which is a built in Python module. This time around I&amp;rsquo;m going to use the same code as before but instead of argparse I&amp;rsquo;ll use a third-party module calle docopt.
-I got this idea from a great talk called From Python script to Open Source Project by Michał Karzyński. It has a lot of great content about putting together a fully-fledged open source Python project and I recommend watching the whole thing.</description>
-    </item>
-    
-    <item>
-      <title>argparse is cool</title>
-      <link>https://mike-yu.com/posts/argparse-is-cool/</link>
-      <pubDate>Mon, 05 Jul 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://mike-yu.com/posts/argparse-is-cool/</guid>
-      <description>argparse is cool    I need to copy files between S3 buckets on a regular basis for my job. The aws command line tool is great but I forget flags often&amp;hellip;and usually the same ones over and over. What if I made a custom version of aws s3 cp that was simpler and fit the majority of my copy usecases?
-Well, here it is in 43 lines (with proper spacing) using argparse:</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://mike-yu.com/reading/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mike-yu.com/reading/</guid>
-      <description>2022     The Quiet Boy by Ben H. Winters Dark Matter by Blake Crouch Recursion by Blake Crouch The Midnight Library by Matt Haig Rock Paper Scissors by Alice Feeney Devolution by Max Brooks  </description>
-    </item>
-    
+    <atom:link href="https://mike-yu.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About Mike</title>
       <link>https://mike-yu.com/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://mike-yu.com/about/</guid>
-      <description>Favorites     Team: Mariners Bike manufacturer: Surly Text editor: Sublime Text Database engine: SQLite (maybe DuckDB soon) Python package: pandas Tech educator: Jake VanderPlas  Frequently used Python patterns    Flatten nested lists:
-from itertools import chain flattened = list(chain.from_iterable([[1, 2, 3], [4, 5, 6], [7, 8, 9]])) csv.DictReader instead of csv.reader:
-with open(&amp;#39;file.csv&amp;#39;) as f: csvreader = csv.DictReader(f) for row in csvreader: val = row[&amp;#39;col_name&amp;#39;] Turn a key/value list into dict of key -&amp;gt; list of values:</description>
+      <description>&lt;p&gt;Big fan of urban biking, baseball, and Seattle summers.&lt;/p&gt;&#xA;&lt;h2 id=&#34;favorites&#34;&gt;&#xA;  Favorites&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#favorites&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Team: Mariners&lt;/li&gt;&#xA;&lt;li&gt;Bike manufacturer: Surly&lt;/li&gt;&#xA;&lt;li&gt;Text editor: Sublime Text&lt;/li&gt;&#xA;&lt;li&gt;Database engine: duckdb&lt;/li&gt;&#xA;&lt;li&gt;Python package: pandas&lt;/li&gt;&#xA;&lt;li&gt;Tech educator: Jake VanderPlas&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
-    
     <item>
       <title>Projects</title>
       <link>https://mike-yu.com/projects/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://mike-yu.com/projects/</guid>
-      <description>fantasy football    https://github.com/joeeoj/fantasy-football (nbviewer link to render the Altair graphs)
-This was a project to learn NFL fantasy football strategy and practice data wrangling and analysis. It gave me a chance to try out Altair and test out mkdocs for writing project documentation (using this great tutorial by calmcode).
-2021/2022 results: 3rd place &amp;ndash; not bad considering I got second to last the year before (I had no idea what I was doing that year).</description>
+      <description>&lt;h2 id=&#34;fantasy-football&#34;&gt;&#xA;  fantasy football&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#fantasy-football&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://mike-yu.com/projects/fantasy_football_2021_combined_charts_50pct.png&#34; alt=&#34;fantasy football charts&#34;&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;project link: &lt;a href=&#34;https://github.com/joeeoj/fantasy-football&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://github.com/joeeoj/fantasy-football&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;nbviewer link: &lt;a href=&#34;https://nbviewer.org/github/joeeoj/fantasy-football/tree/main/&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://nbviewer.org/github/joeeoj/fantasy-football/tree/main/&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Never ending project to get better at NFL fantasy football. Got a chance to do some data wrangling and analysis along the way and get better at altair and mkdocs for writing &lt;a href=&#34;https://joeeoj.github.io/fantasy-football/&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;project documentation&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Results:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;2020: Second to last&lt;/li&gt;&#xA;&lt;li&gt;2021: 3rd&lt;/li&gt;&#xA;&lt;li&gt;2022: 1st&lt;/li&gt;&#xA;&lt;li&gt;2023: 5th&lt;/li&gt;&#xA;&lt;li&gt;2024: 6th (and I missed playoffs by one spot because of weird league rules)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;recipes&#34;&gt;&#xA;  recipes&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#recipes&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://mike-yu.com/projects/whatsfordinner.png&#34; alt=&#34;whatsfordinner screenshot&#34;&gt;&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

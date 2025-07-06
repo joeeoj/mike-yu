@@ -4,7 +4,8 @@
     <title>Categories on Mike Yu</title>
     <link>https://mike-yu.com/categories/</link>
     <description>Recent content in Categories on Mike Yu</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://mike-yu.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="https://mike-yu.com/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

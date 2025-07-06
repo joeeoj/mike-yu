@@ -34,10 +34,6 @@ pygmentsCodeFencesGuessSyntax = true
   colorScheme = "auto"
   hideColorSchemeToggle = false
 
-  # customCSS = ["css/custom.css"]
-  # customSCSS = ["scss/custom.scss"]
-  # customJS = ["js/custom.js"]
-
 [taxonomies]
   category = "categories"
   series = "series"
@@ -55,11 +51,6 @@ pygmentsCodeFencesGuessSyntax = true
   icon = "fa fa-linkedin fa-2x"
   weight = 2
   url = "https://www.linkedin.com/in/mryu1/"
-[[params.social]]
-  name = "Resume"
-  icon = "fa fa-history fa-2x"
-  weight = 3
-  url = "https://registry.jsonresume.org/joeeoj"
 
 # Menu links
 [[menu.main]]
@@ -70,15 +61,3 @@ pygmentsCodeFencesGuessSyntax = true
   name = "Projects"
   weight = 2
   url = "projects/"
-[[menu.main]]
-  name = "Blog"
-  weight = 3
-  url  = "posts/"
-[[menu.main]]
-  name = "Reading"
-  weight = 4
-  url  = "reading/"
-# [[menu.main]]
-#   name = "Contact"
-#   weight = 4
-#   url = "contact/"
